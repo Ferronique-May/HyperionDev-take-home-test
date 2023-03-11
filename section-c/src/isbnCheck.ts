@@ -29,7 +29,7 @@ export const isbn13 = (isbn: string) => {
 
     /** If the string is of length == 13
      * then it finds the product sum of the ISBN-13 number
-     * Checks isbnProductSum is divisible by 10
+     * Checks if isbnProductSum is divisible by 10
      * If yes, returns 'Valid'
      * If no, returns 'Invalid'
      * */
@@ -42,7 +42,7 @@ export const isbn13 = (isbn: string) => {
     }
     /** If the string is of length == 10
      * then it finds the product sum (isbn13ProductSum) of the ISBN-10 number using only the first 9 digits
-     * Then using isbn13ProductSum we subtract the remainder of isbn13ProductSum%10 from 10 to get the check digit
+     * Then using isbn13ProductSum we subtract the remainder of isbn13ProductSum % 10 from 10 to get the check digit
      * Creating a new isbn of length 13 on line 56 using the check digit we calculated.
      * Then check if it is a valid ISBN-13
      * If yes, returns the new ISBN-13
