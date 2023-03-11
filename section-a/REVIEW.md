@@ -4,7 +4,7 @@
 
 The objective of the task was to write a program in python that takes an array of strings and groups them together, then returns the new array with the grouped anagrams.
 
-Firstly well done on attempting the task, but lets go through how you can improve. 
+Firstly well done on attempting the task, but let's go through how you can improve. 
 
 ## Documentation 
 
