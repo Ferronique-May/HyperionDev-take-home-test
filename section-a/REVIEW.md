@@ -9,7 +9,7 @@ Firstly well done on attempting the task, but lets go through how you can improv
 ## Documentation 
 
 ``````
-# Code is read more often that it is writen
+# Code is read more often than it is writen
 # - Guido said something along these lines
 ``````
 For future task please remember that you are not only writing code to get the correct output and move past the assignment. You are also writing code for your users (whoever will be using the software you are developing - me in this case.) and other developers who will work on improving that software (your future self in this scenario). 
