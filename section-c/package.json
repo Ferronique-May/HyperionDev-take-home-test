@@ -1,0 +1,22 @@
+{
+  "name": "isbn_check",
+  "version": "1.0.0",
+  "description": "This program checks if Book numbers given are valid or not. It also converst the ISBN-10 to ISBN-13.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "tsc && jest",
+    "clean": "rimraf dist/",
+    "start": "tsc && node ./dist/isbnCheck.js"
+  },
+  "author": "Ferronique May",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.4.0",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
+  }
+}
