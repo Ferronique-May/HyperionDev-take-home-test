@@ -14,6 +14,9 @@ describe('ISBN', () => {
         it('should return "Invalid" if a string of incorrect length is provided', () => {
             expect(isbn13('978123456789')).toBe('Invalid');
         });
+        it('should return "Invalid" if a string contains non-numeric characters', () => {
+            expect(isbn13("1234zxcvnmas4")).toBe('Invalid');
+        })
     });
   
     describe('ISBN-10 to ISBN-13', () => {

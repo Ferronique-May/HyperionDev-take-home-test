@@ -1,3 +1,8 @@
+// Check if string contains only numbers
+const validateStr = (str: string) => {
+    return /^[0-9]+$/.test(str);
+}
+
 // Converts a given 'number string' into a number
 const covertStrToNum = (str: string) => {
     return str.split('').map(char => parseInt(char));
@@ -27,20 +32,20 @@ export const isbn13 = (isbn: string) => {
     let isbnProductSum: number;
     let strLength: number = isbn.length
 
-    /** If the string is of length == 13
+    /** If the string is of length == 13 with only numbers
      * then it finds the product sum of the ISBN-13 number
      * Checks if isbnProductSum is divisible by 10
      * If yes, returns 'Valid'
      * If no, returns 'Invalid'
      * */
-    if(strLength === 13){
+    if(validateStr(isbn) && strLength === 13){
 
         isbnProductSum = getIsbn13Sum(isbn);
 
         return isbnProductSum % 10 === 0 ? 'Valid' : 'Invalid';
 
     }
-    /** If the string is of length == 10
+    /** If the string is of length == 10 with only numbers
      * then it finds the product sum (isbn13ProductSum) of the ISBN-10 number using only the first 9 digits
      * Then using isbn13ProductSum we subtract the remainder of isbn13ProductSum % 10 from 10 to get the check digit
      * Creating a new isbn of length 13 on line 56 using the check digit we calculated.
@@ -48,7 +53,7 @@ export const isbn13 = (isbn: string) => {
      * If yes, returns the new ISBN-13
      * If no, returns 'Invalid'
      * */
-    else if(strLength === 10) {
+    else if(validateStr(isbn) && strLength === 10) {
         isbnProductSum = getIsbn10Sum(isbn);
 
         if(isbnProductSum % 11 === 0) {
@@ -70,3 +75,4 @@ export const isbn13 = (isbn: string) => {
 // console.log(isbn13("9780316066525"));
 // console.log(isbn13("0330301824"));
 // console.log(isbn13("0316066524"));
+// console.log(isbn13("123asb"));
